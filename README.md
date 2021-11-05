@@ -12,9 +12,9 @@ The categories:
 - Balls and Field Lines = 2 (Labeled as *White*)
 - Obstacles = 3 (Labeled as *Black*)
 
-The table is a single long array consists of $\text{COLOR\_BITS}^3$ where *COLOR_BITS* is 64 to reduce LUT size and memory. The single array will map the HSV value into positional index in the LUT using:
+The table is a single long array consists of $\text{BINS}^3$ where *BINS* is 64 ($2^6$) to reduce LUT size and memory. The single array will map the HSV value into positional index in the LUT using:
 
-$\text{H}+\text{S}\times\text{COLOR\_BITS}+\text{V}\times\text{COLOR\_BITS}\times\text{COLOR\_BITS} = \text{CLASS}$
+![formula](https://render.githubusercontent.com/render/math?math=H%2BS{\times}BINS%2BV{\times}BINS{\times}BINS=CLASS)
 
 I forgot the LUTs original repository, but credit goes to the original author.
 
